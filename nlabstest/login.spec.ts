@@ -13,7 +13,7 @@ test('login test', async()=>{
 
     const LoginButton:Locator = await page.locator("[value=Login]");
 
-    await emailId.fill("pwtest@opencart.com");
+    await emailId.fill("apg@yopmail.com");
     await password.fill("playwright123");
     await LoginButton.click();
 
@@ -22,9 +22,9 @@ test('login test', async()=>{
 
     await page.screenshot({path:'homepage.png'});
 
-    //expect(title).toEqual('My Account');
-    expect(title).toEqual('Account Login');
+    expect(title).toEqual('My Account');
+    //expect(title).toEqual('Account Login');
 
-    //browser.close();
+    browser.close();
 
 });
