@@ -2,9 +2,9 @@ import {test, Browser, Page, Locator} from '@playwright/test'
 import {webkit, chromium, firefox} from 'playwright'
 
 test('register test', async()=>{
-    //const browser:Browser = await firefox.launch({headless: true});
-    //const browser:Browser = await webkit.launch({headless: true});
-    const browser:Browser = await chromium.launch({headless: true});
+    //const browser:Browser = await firefox.launch();
+    //const browser:Browser = await webkit.launch();
+    const browser:Browser = await chromium.launch();
     const page:Page = await browser.newPage();
     await page.goto("https://naveenautomationlabs.com/opencart/index.php?route=account/register");
     
