@@ -25,6 +25,6 @@ test('login test', async()=>{
     expect(title).toEqual('My Account');
     //expect(title).toEqual('Account Login');
 
-    browser.close();
+    //browser.close();
 
 });

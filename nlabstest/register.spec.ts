@@ -29,6 +29,6 @@ test('register test', async()=>{
 
     await page.screenshot({path:'registered.png'});
 
-    browser.close();
+    //browser.close();
 
 });
