@@ -14,8 +14,8 @@ test('register test', async()=>{
     const telephone:Locator = await page.locator('#input-telephone');
     const password:Locator = await page.locator('#input-password');
     const confirmpassword:Locator = await page.locator('#input-confirm');
-    const checkbox: Locator = page.locator('input[type="checkbox"][name="agree"]');
-    const continueButton: Locator = page.locator('input[type="submit"][value="Continue"]');
+    const checkbox: Locator = await page.locator('input[type="checkbox"][name="agree"]');
+    const continueButton: Locator = await page.locator('input[type="submit"][value="Continue"]');
 
     await firstname.fill("APG");
     await lastname.fill("New");
