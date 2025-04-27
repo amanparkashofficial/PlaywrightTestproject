@@ -4,18 +4,18 @@ import {webkit, chromium, firefox} from 'playwright'
 test('register test', async()=>{
     //const browser:Browser = await firefox.launch();
     //const browser:Browser = await webkit.launch();
-    const browser:Browser = await chromium.launch();
+    const browser: Browser = await chromium.launch({ headless: true });
     const page:Page = await browser.newPage();
     await page.goto("https://naveenautomationlabs.com/opencart/index.php?route=account/register");
     
-    const firstname:Locator = await page.locator('#input-firstname');
-    const lastname:Locator = await page.locator('#input-lastname');
-    const emailId:Locator = await page.locator('#input-email');
-    const telephone:Locator = await page.locator('#input-telephone');
-    const password:Locator = await page.locator('#input-password');
-    const confirmpassword:Locator = await page.locator('#input-confirm');
-    const checkbox: Locator = await page.locator('input[type="checkbox"][name="agree"]');
-    const continueButton: Locator = await page.locator('input[type="submit"][value="Continue"]');
+    const firstname:Locator = page.locator('#input-firstname');
+    const lastname:Locator = page.locator('#input-lastname');
+    const emailId:Locator = page.locator('#input-email');
+    const telephone:Locator = page.locator('#input-telephone');
+    const password:Locator = page.locator('#input-password');
+    const confirmpassword:Locator = page.locator('#input-confirm');
+    const checkbox: Locator = page.locator('input[type="checkbox"][name="agree"]');
+    const continueButton: Locator = page.locator('input[type="submit"][value="Continue"]');
 
     await firstname.fill("APG");
     await lastname.fill("New");
@@ -29,6 +29,6 @@ test('register test', async()=>{
 
     await page.screenshot({path:'registered.png'});
 
-    //browser.close();
+    await browser.close();
 
 });
