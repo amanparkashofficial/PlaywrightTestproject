@@ -4,7 +4,7 @@ import { webkit, chromium, firefox } from 'playwright';
 test('Select based dropdown test', async () => {
     //const browser: Browser = await firefox.launch({ headless: false });
     //const browser: Browser = await webkit.launch({ headless: false });
-    const browser: Browser = await chromium.launch({ headless: false });
+    const browser: Browser = await chromium.launch();
 
     const page: Page = await browser.newPage();
     await page.goto("https://www.magupdate.co.uk/magazine-subscription/phrr");
