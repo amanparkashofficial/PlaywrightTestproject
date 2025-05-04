@@ -1,7 +1,7 @@
 import { test, expect, Browser, Page, Locator } from '@playwright/test';
 import { webkit, chromium, firefox } from 'playwright';
 
-test('Select based dropdown test', async () => {
+test('mouse hover test', async () => {
     //const browser: Browser = await firefox.launch({ headless: false });
     //const browser: Browser = await webkit.launch({ headless: false });
     const browser: Browser = await chromium.launch();
