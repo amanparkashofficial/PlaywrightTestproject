@@ -3,7 +3,7 @@ import log from 'console';
 import {webkit, chromium, firefox } from 'playwright'
 
 test('mouse click events', async()=>{
-const browser:Browser = await chromium.launch({headless: false, channel: 'chrome'});
+const browser:Browser = await chromium.launch();
 const page: Page = await browser.newPage();
 
 
