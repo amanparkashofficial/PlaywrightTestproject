@@ -4,7 +4,7 @@ import {webkit, chromium, firefox } from 'playwright'
 
 test('Type characters sequentially', async()=>{
 
-    const browser:Browser = await chromium.launch({headless: false, channel: 'chrome'}); 
+    const browser:Browser = await chromium.launch(); 
     const page: Page = await browser.newPage(); 
     
     await page.goto("https://www.flipkart.com/"); 
