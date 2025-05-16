@@ -50,5 +50,8 @@ test('locator test', async () => {
     await search.fill('macbook');
 
 
+    await page.waitForTimeout (3000);
+
+
 
 });
